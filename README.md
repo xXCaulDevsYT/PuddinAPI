@@ -21,8 +21,6 @@ client.on('message' async (message) => {
     }
 });
 
-const snekfetch = require("snekfetch"); // use this or node fetch
-
 client.on('message' async (message) => {
     const { body: { yomomma } } = await snekfetch.get("https://puddinapi.glitch.me/api/v1/yomomma"); // collects the yomomma joke from the endpoint
 
@@ -30,8 +28,6 @@ client.on('message' async (message) => {
         message.channel.send(yomomma); // sends the yomomma joke to the channel the command was ran in
     }
 });
-
-const snekfetch = require("snekfetch"); // use this or node fetch
 
 client.on('message' async (message) => {
     const { body: { roast } } = await snekfetch.get("https://puddinapi.glitch.me/api/v1/roast"); // collects the roast from the endpoint
